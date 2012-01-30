@@ -9,7 +9,7 @@
 	<link rel=stylesheet href=css/igloos.css>
 	
 	<!-- Your extension -->
-	<!-- <link rel=stylesheet href=css/style.css> -->
+	<link rel=stylesheet href=css/style.css>
 
 	<!-- humans.txt -->
 	<link rel=author href=humans.txt>
@@ -17,11 +17,32 @@
     <!-- Favicons and the like (avoid using transparent .png) -->
 	<link rel="shortcut icon" href=icon.png>
 	<link rel=apple-touch-icon-precomposed href=icon.png />
+    <script src="js/mootools.core.js" type="text/javascript"></script>
+	<script src="js/mootools.more.js" type="text/javascript"></script>
+    <script src="js/dash.js" type="text/javascript"></script>
 </head>
-<body class=wrapper>
-<div class=grids>
-		<div class=grid-6>
+<body class=wrapper onload="sizeBlocks();" onresize="sizeBlocks();">
+    <div class=grids>
+		<div id=block1 class="grid-1 dash-block">
+            block1
         </div>
-</div>
+        <div id=block2 class="grid-1 dash-block">
+            block2
+        </div>
+        <div id=block3 class="grid-1 dash-block">
+            block3
+        </div>
+    </div>
+    <div class=grids>
+		<div id=block4 class="grid-1 dash-block">
+            block4
+        </div>
+        <div id=block5 class="grid-1 dash-block">
+            block5
+        </div>
+        <div id=block6 class="grid-1 dash-block">
+            block6
+        </div>
+    </div>
 </body>
 </html>

@@ -26,7 +26,7 @@ inuitcss.com
 Page wrapper. Apply to the body where possible, as per: http://csswizardry.com/2011/01/using-the-body-element-as-a-wrapper/
 */
 .wrapper{
-	max-width:1000px;
+	max-width:100%;
 	margin:0 auto;
 	padding:0 10px;
 }
@@ -37,7 +37,7 @@ We also allow you to use grid items as stand alone columns or in a series of col
 */
 .grids{
 	clear:both;
-	max-width:1020px;
+	max-width:100%;
 	margin:0 0 0 -1.961%;
 	list-style:none; /* So we can make grids out of lists */
 }
