@@ -1,5 +1,7 @@
+@import url('http://fonts.googleapis.com/css?family=Overlock:400,700italic,400italic,700');
+
 body {
-    font-family: sans-serif;
+    font-family: 'Overlock', cursive;
     color: white;
     background-color: black;
 }
@@ -8,7 +10,6 @@ div {
 }
 
 .dash-block {
-    margin: 1em;
 }
 
 @media only screen and (device-width: 768px) {

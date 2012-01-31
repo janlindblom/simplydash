@@ -1,16 +1,36 @@
-/* simply-dash JS functions. */
+/* Simply Dashboard
+ * 
+ * Copyright (c) 2012, Jan Lindblom.
+ * 
+ */
 
-function getVPHeight() {
-    return window.getSize().y;
-}
+/* variables */
+
+var blocks = ['block1','block2','block3','block4','block5','block6'];
+
+/* functions. */
 
 function sizeBlocks() {
-    var blockHeight = getVPHeight() / 2;
+    var blockHeight = Math.floor((window.getSize().y / 2) - 1);
 
-    $('block1').tween('height', blockHeight);
-    $('block2').tween('height', blockHeight);
-    $('block3').tween('height', blockHeight);
-    $('block4').tween('height', blockHeight);
-    $('block5').tween('height', blockHeight);
-    $('block6').tween('height', blockHeight);
+    var rowheight = Math.floor(blockHeight / 10);
+    var fontheight = rowheight - 1;
+
+    blocks.each(function(item){
+        var element = document.id(item);
+        element.set({
+            html: 'asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf<br>asdf',
+            style: 'font-size: '+fontheight+'px; line-height: '+rowheight+'px;'});
+        var myFx = new Fx.Tween(item, {
+            duration: 'long',
+            transition: 'bounce:out',
+            property: 'height'
+        });
+        myFx.start(blockHeight);
+        
+    });
+}
+
+function initDash() {
+    sizeBlocks();
 }
